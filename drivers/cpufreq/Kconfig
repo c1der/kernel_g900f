@@ -193,7 +193,7 @@ config CPU_FREQ_DEFAULT_GOV_LIONHEART
         bool "lionheart"
         select CPU_FREQ_GOV_LIONHEART
         help
-        Use the CPUFreq governor 'lionheart' as default.	  
+        Use the CPUFreq governor 'lionheart' as default.
 
 endchoice
 
@@ -395,7 +395,12 @@ config CPU_FREQ_GOV_BLAZEACTIVE
 
 	  For details, take a look at linux/Documentation/cpu-freq.
 
-	  If in doubt, say N.          
+	  If in doubt, say N.
+config CPU_FREQ_GOV_ZZMOVE
+    tristate "'zzmove' cpufreq governor"
+    depends on CPU_FREQ
+    help
+    'zzmove' - a "smooth" excellent governor!
 
 menu "x86 CPU frequency scaling drivers"
 depends on X86
